@@ -1,0 +1,72 @@
+import pygame
+from pygame.draw import *
+
+pygame.init()
+
+FPS = 30
+screen = pygame.display.set_mode((400, 400))
+
+rect(screen, (0, 200, 0), (0, 0, 400, 400), 0)
+rect(screen, (0, 200, 225), (0, 0, 400, 200), 0)
+circle(screen, (255, 255, 0), (350, 0), 75)
+rect(screen, (200, 200, 200), (30, 200, 25, 100),0)
+ellipse(screen, (0, 150, 0), (-10, 90,100,150),0)
+ellipse(screen, (0, 150, 0), (-10, 50,100,150),0)
+ellipse(screen, (0, 150, 0), (0, 90,150,100),0)
+ellipse(screen, (255, 192, 203), (40, 220,25,20),0)
+ellipse(screen, (255, 192, 203), (120, 135,25,20),0)
+ellipse(screen, (255, 192, 203), (45, 75,25,20),0)
+rect(screen, (255, 255, 255), (225, 280, 10, 50),0)
+rect(screen, (255, 255, 255), (280, 280, 10, 50),0)
+ellipse(screen, (255, 255, 255), (200, 250,100,50),0)
+ellipse(screen, (255, 255, 255), (270, 200,45 ,25),0)
+rect(screen, (255, 255, 255), (275, 220, 25, 55),0)
+ellipse(screen, (255, 255, 255), (303, 205,25 ,15),0)
+rect(screen, (255, 255, 255), (205, 280, 12, 55),0)
+rect(screen, (255, 255, 255), (250, 280, 12, 55),0)
+polygon(screen, (233, 175, 175), [(290,175), (295,200), (285,200)],0)
+ellipse(screen, (255, 238, 170), (255, 220, 25 ,15),0)
+ellipse(screen, (255, 238, 170), (258, 235, 22 ,12),0)
+ellipse(screen, (233, 198, 175), (264, 215, 25 ,15),0)
+ellipse(screen, (233, 175, 175), (257, 210, 20 ,15),0)
+ellipse(screen, (233, 198, 175), (262, 220, 25 ,15),0)
+ellipse(screen, (233, 198, 175), (255, 230, 25 ,14),0)
+ellipse(screen, (221, 175, 233), (245, 230, 24 ,11),0)
+ellipse(screen, (221, 175, 233), (245, 250, 23 ,10),0)
+ellipse(screen, (175, 233, 221), (250, 245, 25 ,12),0)
+ellipse(screen, (175, 233, 221), (240, 241, 21 ,10),0)
+ellipse(screen, (255, 238, 170), (255, 230, 25 ,15),0)
+ellipse(screen, (221, 175, 233), (260, 245, 24 ,15),0)
+ellipse(screen, (233, 175, 175), (240, 240, 25 ,12),0)
+ellipse(screen, (175, 233, 221), (264, 235, 25 ,10),0)
+ellipse(screen, (233, 175, 175), (265, 200, 25 ,15),0)
+circle(screen, (229, 128, 255), (300, 210), 4)
+circle(screen, (0, 0, 0), (301, 210), 2)
+ellipse(screen, (175, 233, 221), (173, 280, 23 ,10),0)
+ellipse(screen, (255, 255, 255), (185, 280, 2 , 1),0)
+ellipse(screen, (255, 238, 170), (185, 290, 25 ,15),0)
+ellipse(screen, (221, 175, 233), (190, 305, 24 ,15),0)
+ellipse(screen, (233, 175, 175), (170, 300, 25 ,12),0)
+ellipse(screen, (255, 238, 170), (180, 265, 22 ,12),0)
+ellipse(screen, (175, 233, 221), (194, 305, 25 ,10),0)
+ellipse(screen, (233, 175, 175), (187, 270, 20 ,15),0)
+ellipse(screen, (233, 198, 175), (192, 290, 25 ,15),0)
+ellipse(screen, (175, 233, 221), (170, 306, 21 ,10),0)
+ellipse(screen, (233, 198, 175), (185, 290, 25 ,14),0)
+ellipse(screen, (221, 175, 233), (175, 290, 24 ,11),0)
+ellipse(screen, (255, 238, 170), (185, 280, 25 ,15),0)
+ellipse(screen, (233, 198, 175), (194, 275, 25 ,15),0)
+ellipse(screen, (175, 233, 221), (180, 315, 25 ,12),0)
+ellipse(screen, (221, 175, 233), (173, 315, 23 ,10),0)
+ellipse(screen, (233, 175, 175), (195, 260, 25 ,15),0)
+pygame.display.update()
+clock = pygame.time.Clock()
+finished = False
+
+while not finished:
+    clock.tick(FPS)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            finished = True
+
+pygame.quit()
