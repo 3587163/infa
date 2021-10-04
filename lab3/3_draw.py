@@ -6,41 +6,42 @@ pygame.init()
 FPS = 30
 screen = pygame.display.set_mode((400, 400))
 
-"""
-Colours for the picture
-"""
-BRIGHT_GREEN=(0, 200, 0)
-BLUE=(0, 200, 255)
-GRAY=(200, 200, 200)
-GREEN=(0,150,0)
-LIGHT_GREEN=(0,200,0)
-PINK=(255,192,203)
-WHITE=(255, 255, 255)
-CREAMY=(233, 175, 175)
-YELLOW=(255, 238, 170)
-BROWN=(233, 198, 175)
-PURPLE=(221, 175, 233)
-TURQUOISE=(175, 233, 221)
-BLACK=(0, 0, 0)
-VARE_PURPLE=(229, 128, 255)
+
+#Colours for the picture
+BRIGHT_GREEN = (0, 200, 0)
+BLUE = (0, 200, 255)
+GRAY = (200, 200, 200)
+GREEN = (0,150,0)
+LIGHT_GREEN = (0,200,0)
+PINK = (255,192,203)
+WHITE = (255, 255, 255)
+CREAMY = (233, 175, 175)
+YELLOW = (255, 238, 170)
+BROWN = (233, 198, 175)
+PURPLE = (221, 175, 233)
+TURQUOISE = (175, 233, 221)
+BLACK = (0, 0, 0)
+VARE_PURPLE = (229, 128, 255)
 
 
-"""DRAWING FUNCTIONS"""
+#DRAWING FUNCTIONS
 
 
 
-"""Fuction draws the background"""
+
 def bg():
+    """Fuction draws the background"""
     rect(screen, BRIGHT_GREEN, (0, 0, 400, 400), 0)
     rect(screen, BLUE, (0, 0, 400, 200), 0)
 
     
-"""
-Function draws single tree that can be located in different parts of picture
-using variables x and y. Variables t and s are used for the stretching or
-compression of the tree along x or y xoordinate axis
-"""
+
 def tree(x,y,t,s):
+    """
+    Function draws single tree that can be located in different parts of picture
+    using variables x and y. Variables t and s are used for the stretching or
+    compression of the tree along x or y xoordinate axis
+    """
     rect(screen, GRAY, (t*30+x, s*200+y, 25*t, 100*s),0)
     ellipse(screen, GREEN, (t*(-10)+x, s*50+y, 100*t, s*150),0)
     ellipse(screen, LIGHT_GREEN, (t*(-10)+x, s*50+y, 100*t, s*150),2)
@@ -56,13 +57,14 @@ def tree(x,y,t,s):
     ellipse(screen, PINK, (t*(-60)+x, s*135+y, 25*t,s*20),0)
 
     
-"""    
-Function draws unicorn. Roles of x, y, t, s variables are the same as for function "tree"
-Variable a defines if unicorn is reflected in reltion to the y axis (a=1) or not (a=-1)
-z is a coordinate of reflection axis. z=0 if a=-1
-k depends on a. Swaps the edges of figures if reflected
-"""
+
 def unic(x,y,z,t,s,a):
+    """    
+    Function draws unicorn. Roles of x, y, t, s variables are the same as for function "tree"
+    Variable a defines if unicorn is reflected in reltion to the y axis (a=1) or not (a=-1)
+    z is a coordinate of reflection axis. z=0 if a=-1
+    k depends on a. Swaps the edges of figures if reflected
+    """
     if a==1:
         k=1
     if a==-1:
@@ -114,7 +116,7 @@ def unic(x,y,z,t,s,a):
 
 
 
-"""START OF DRAWING"""
+#START OF DRAWING
 bg()
 tree(70,0,0.75,0.75)
 tree(0,50,0.5,0.75)
@@ -126,10 +128,9 @@ unic(50,100,0,0.5,0.5,-1)
 unic(100,100,200,0.75,0.75,1)
 unic(-50,100,0,1,1,-1)
 
-"""DRAWING OF SUNNY"""
-"""Colour of sunny rays changes gradually from yellow to blue. d is step in colour
-for the loup, r is radius of single point(circle) on the rays
-"""
+#DRAWING OF SUNNY
+#Colour of sunny rays changes gradually from yellow to blue. d is step in colour
+#for the loup, r is radius of single point(circle) on the rays
 d=0
 for r in range (1,51,1):
     circle(screen,(0+5*d,200+1*d,255-5*d),(300,50),75-r)
