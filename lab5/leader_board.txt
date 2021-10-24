@@ -1,0 +1,5 @@
+frf : 10
+huh : 30
+ju : 18
+gdgd : 25
+sss : 17
